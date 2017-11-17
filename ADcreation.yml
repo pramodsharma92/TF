@@ -1,0 +1,7 @@
+---
+- hosts: windows
+  tasks:
+        - name: install the AD-domain services
+          script: /etc/ansible/ADpowershellscrpit.ps1
+          register: output
+        - debug: var=output
